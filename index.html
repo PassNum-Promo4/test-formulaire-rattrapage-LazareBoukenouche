@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Formulaire Joueur</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-  </div>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Formulaire Joueur</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		
+		<div class="container">
+			
+			<form>
+				
+				<fieldset>
+					<legend>Informations personnelles</legend>
+
+					<label for="prenom">Prénom* </label>
+					<input class="champ" type="text" id ="prenom" placeholder="Inserer votre prenom ici" required />
+					
+					<label for="nom">Nom* </label>
+					<input class="champ" type="text" id="nom" placeholder="Inserer votre nom ici" required />
+					
+					<br>
+					
+					<label for="dateNaissance">Date de naissance* </label>
+					<input class="champ" type="date" id="dateNaissance" value=" jj/mm/aaaa" required />
+					
+				</fieldset>
+				
+				<label for="nbJoueurs">Numéro du joueur (compris entre 9 et 99)</label>
+				<input class="champ" type="number" id="nbJoueurs" min=9 max= 99 />
+				
+				<fieldset class="radioBouton" align="center" >
+					<legend>Liste des postes auxquels je peux évoluer</legend>
+					
+					 <input class="champ"type="radio" id="defenseur" name="poste" value="defenseur">
+					<label for="defenseur">Défenseur</label>
+					
+					<br>
+					
+					<input class="champ" type="radio" id="milieu"name="poste" value="milieu">
+					<label for="milieu">Milieu</label>
+					
+					<br>
+					
+					<input class="champ" type="radio" id="attaquant" name="poste" value="attaquant">
+					<label for="attaquant">Attaquant</label>
+					
+					<br>
+					
+					<input class="champ" type="button" value="Obtenir des information supplémentaires sur les postes"></input>
+				</fieldset>
+				
+				<input class="champ" type="submit" id="boutonEnvoi" value="Envoyer" />
+				<label for="boutonEnvoi"> *=Champs obligatoires</label>
+			</form>
+		</div>
+	</body>
 </html>
